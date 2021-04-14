@@ -1,0 +1,22 @@
+nohup命令：后台任务挂起---https://www.runoob.com/linux/linux-comm-nohup.html
+
+nohup python -u test_read_pic_and_predict.py > test.log 2>&1 &
+（最后的 & 表示在后台运行）
+（2 表示输出错误信息到提示符窗口）
+（1 表示输出信息到提示符窗口，1前面的&要注意添加，否则还会创建一个名为 1 的文件）
+最后会把日志文件输出到 test.log 文件
+
+nohup python3 -u xxx.py > xxx.log 2>&1 &
+nohup npm run serve > xxx.log 2>&1 &
+
+查看任务：
+jobs -l（当前终端）
+ps -aux（全部进程）
+删除任务：
+kill -9  进程号
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ubuntu   15234 12.9  1.3 725288 24536 ?        Rl   Mar31 755:54 ptaosython3 -u Server.py
+ubuntu   15365  0.0  0.9 136640 18156 ?        Sl   Mar31   0:33 python3 -u Client1.py
+ubuntu   15426  0.0  0.9 136640 18160 ?        Sl   Mar31   0:33 python3 -u Client2.py
+ubuntu   15454  0.0  0.9 136640 18176 ?        Sl   Mar31   0:33 python3 -u Client3.py

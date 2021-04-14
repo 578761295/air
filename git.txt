@@ -1,0 +1,28 @@
+https://blog.csdn.net/loner_fang/article/details/80488385
+https://zhuanlan.zhihu.com/p/141896352
+
+
+git config --global user.name "lks"  #名称
+git config --global user.email 578761295@qq.com   #邮箱
+
+$ ssh-keygen -t rsa -C "578761295@qq.com"
+ /c/Users/Lenovo/.ssh/
+id_rsa.pub
+
+D:\2021
+第一次提交文件夹到码云上的操作步骤如下：
+             1.把当前目录变成git可以管理的仓库：git init
+             2.添加文件：
+                        2.1添加单个文件：git add readme.txt
+                        2.2添加全部文件：git add -A
+             3.提交修改：git commit -m "一定要写备注"
+             4.查看最近日志：git log
+             5.git remote add origin 替换成远程仓库的地址
+             6.git push -u origin master
+第二次提交的操作步骤是：
+             1.添加文件
+                       1.1添加单个文件：git add readme.txt
+                       1.2添加全部文件：git add -A
+             2.提交修改：git commit -m "一定要写备注"
+             3.查看最近日志：git log 
+             4.git push

@@ -1,0 +1,78 @@
+前期准备：
+pip
+npm（cnpm）
+node.js
+python
+HBuilder X
+
+
+
+构建项目
+1、全局安装脚手架
+vue3.x安装：npm install -g @vue/cli
+vue可视化构建项目：vue ui
+cnpm安装：npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+创建项目：vue create projectname
+配置方式：
+Please pick a preset
+=> Manually select features
+自定义配置：
+Check the features needed for your project
+=> (*) Choose Vue version
+=> (*) Babel
+=> (*) Router
+=> (*) Vuex
+=> (*) CSS Pre-processors
+=> (*) Linter / Formatter
+选择Vue版本：
+Choose a version of Vue.js that you want to start the project with
+=>2.x
+路径的选择，是否需要#：
+Use history mode for router? (Requires proper server setup for index fallback in production)
+=>Yes
+css预编译器选择：
+Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default)
+=>Sass/SCSS (with node-sass)
+选择ESLint的代码规范：
+Pick a linter / formatter config
+=>ESLint+Prettier
+何时进行代码检测：
+Pick additional lint features
+=>Lint on save
+选择Babel、PostCSS、ESLint等配置文件存放位置：
+Where do you prefer placing config for Babel, ESLint, etc.?
+=>In dedicated config files
+是否保存这些配置，给以后使用：
+Save this as a preset for future projects? 
+=>No
+
+完成以下步骤
+To get started:
+  cd air-monitor
+  npm run serve
+
+
+
+2、项目配置
+安装Elemnet：
+npm i element-ui -s
+在main.js里添加：
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
+
+vue2.0转变vue3.0、composition-api依赖：
+npm install @vue/composition-api --save
+在main.js里添加：
+import VueCompositionApi from '@vue/composition-api';
+Vue.use(VueCompositionApi);
+
+
+安装axios：
+npm install axios
+
+
+安装mitt:
+npm install --save mitt

@@ -1,0 +1,52 @@
+1、服务器安装（linux）
+安装：
+$ sudo tar -xzvf TDengine-server-2.0.15.0-Linux-x64.tar.gz
+$ cd TDengine-server-2.0.15.0
+$ sudo ./install.sh
+
+卸载：
+$ rmtaos（卸载命令）
+
+查看：
+ubuntu@VM-0-14-ubuntu:/usr/local/taos$ ls
+bin  cfg  connector  data  driver  examples  include  init.d  log
+自动生成配置文件目录、数据库目录、日志目录。
+配置文件缺省目录：/etc/taos/taos.cfg， 软链接到/usr/local/taos/cfg/taos.cfg；
+数据库缺省目录：/var/lib/taos， 软链接到/usr/local/taos/data；
+日志缺省目录：/var/log/taos， 软链接到/usr/local/taos/log；
+/usr/local/taos/bin目录下的可执行文件，会软链接到/usr/bin目录下；
+/usr/local/taos/driver目录下的动态库文件，会软链接到/usr/lib目录下；
+/usr/local/taos/include目录下的头文件，会软链接到到/usr/include目录下；
+
+启动：
+$ sudo systemctl start taosd
+$ systemctl status taosd
+
+修改hostname，切换用户使配置生效
+$ sudo hostnamectl set-hostname lksubuntu
+$ sudo vi /etc/hosts
+ip lksubuntu
+
+
+
+2、客户端安装（window）
+https://www.freesion.com/article/77861343984/
+
+双击exe文件安装C:\TDengine
+
+修改hostname
+C:\Windows\System32\drivers\etc hosts（但是权限好像不行）
+c:\TDengine>taos -h 106.55.27.102（windows没有配置lksubuntu，无法使用）
+
+切记，用pip install taos安装的包是不能用的。
+正确的安装方式是，pip install C:\TDengine\connector\python\windows\python3\
+
+之后就可以愉快的按照C:\TDengine\examples\python介绍来开发了
+
+
+
+2、客户端安装（Linux）
+用户可以在源代码的src/connector/python（或者tar.gz的/connector/python）文件夹下找到python2和python3的connector安装包。用户可以通过pip命令安装：
+​ pip install src/connector/python/linux/python2/
+或
+​ pip3 install src/connector/python/linux/python3/

@@ -1,0 +1,11 @@
+1、pip（sudo apt install python3-pip）
+2、Tdengine（利用远程传送，将TDengine-server-2.0.15.0-Linux-x64.tar.gz传过来）
+解压：sudo tar -xzvf TDengine-server-2.0.15.0-Linux-x64.tar.gz
+进入目录：TDengine-server-2.0.15.0
+安装：sudo ./install.sh
+启动服务：sudo systemctl start taosd
+查看服务：systemctl status taosd
+3、emqx
+下载：sudo wget https://www.emqx.cn/downloads/broker/v4.2.9/emqx-ubuntu18.04-4.2.9-x86_64.zip
+安装：unzip emqx-ubuntu18.04-4.2.9-x86_64.zip
+启动服务：./bin/emqx start（启动后即可访问 localhost:18083 进入登入页面 默认用户名：admin，密码：public）
